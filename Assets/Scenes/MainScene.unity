@@ -741,10 +741,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: JPGP
+  m_text: "\uC9C0\uAD6C\uC0B0 "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8a76aba51c6fb421f9b783dae88987ec, type: 2}
+  m_sharedMaterial: {fileID: 56555748852823894, guid: 8a76aba51c6fb421f9b783dae88987ec, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
