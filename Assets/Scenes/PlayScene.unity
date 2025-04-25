@@ -1473,7 +1473,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4948040893ea64fde8b846c73e35dbb3, type: 2}
+  - {fileID: 2100000, guid: 19b8bf35a514a42239294ab5287c9822, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1551,6 +1551,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2676465732471485453, guid: 36a214766c1a4490196e6ad6fea22258, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b6551309ee4a491b81a425b421c53cd, type: 2}
     - target: {fileID: 3942079368800983017, guid: 36a214766c1a4490196e6ad6fea22258, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1558,6 +1562,14 @@ PrefabInstance:
     - target: {fileID: 4324889322061184973, guid: 36a214766c1a4490196e6ad6fea22258, type: 3}
       propertyPath: m_Name
       value: Human_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043645318856262746, guid: 36a214766c1a4490196e6ad6fea22258, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081499756193425717, guid: 36a214766c1a4490196e6ad6fea22258, type: 3}
+      propertyPath: m_Height
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
