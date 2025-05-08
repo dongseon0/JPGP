@@ -1,6 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class UFOAbduction : MonoBehaviour
+public class BeamTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
@@ -10,9 +12,10 @@ public class UFOAbduction : MonoBehaviour
             if (human != null)
             {
                 GameManager.Instance.AddScore(human.scoreValue);
+                GameManager.Instance.AddCount();
+                Destroy(other.gameObject);
             }
-
-            Destroy(other.gameObject); // 납치된 인간 제거
         }
     }
 }
+
