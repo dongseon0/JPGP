@@ -4,12 +4,8 @@ using System.Collections;
 public class BeamTrigger : MonoBehaviour
 {
     public float captureTimeRequired = 2f; // 2초 동안 포획
-    private CaptureUI captureUI; // 포획 바 구현
+    public CaptureUI captureUI;
 
-    private void Start()
-    {
-        captureUI = GetComponentInParent<CaptureUI>(); // UFO에 붙어 있음
-    }
 
     private void OnTriggerStay(Collider other)
     {
@@ -23,8 +19,12 @@ public class BeamTrigger : MonoBehaviour
                     human.captureTimer += Time.deltaTime;
 
                     float progress = Mathf.Clamp01(human.captureTimer / captureTimeRequired);
+                    // 바 위치를 현재 타겟 인간 위로 옮김
+                    captureUI.transform.position = human.transform.position + Vector3.up * 1.5f;
+
                     captureUI.SetProgress(progress);
                     captureUI.Show(true);
+                    
 
                     if (human.captureTimer >= captureTimeRequired)
                     {

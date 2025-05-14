@@ -6,6 +6,7 @@ TagManager:
   tags:
   - HumanA
   - Human
+  - UFO
   layers:
   - Default
   - TransparentFX

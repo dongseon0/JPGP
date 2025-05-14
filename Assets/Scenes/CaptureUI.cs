@@ -3,15 +3,15 @@ using UnityEngine.UI;
 
 public class CaptureUI : MonoBehaviour
 {
-    public Slider progressBar;
+    public Image fillImage;
 
     public void SetProgress(float value)
     {
-        progressBar.value = value;
+        fillImage.fillAmount = Mathf.Clamp01(value);
     }
 
     public void Show(bool visible)
     {
-        progressBar.gameObject.SetActive(visible);
+        fillImage.transform.parent.gameObject.SetActive(visible);
     }
 }
