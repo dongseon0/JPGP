@@ -4,8 +4,8 @@ public class HumanAI : MonoBehaviour
 {
     public float moveSpeed = 15f;                  // 이동 속도
     public float detectionRange = 3f;               // UFO 인식 범위
-    public Vector2 areaMin = new Vector2(-5f, -3f); // 이동 가능한 XZ 경계 (좌하단)
-    public Vector2 areaMax = new Vector2(5f, 2f);   // 이동 가능한 XZ 경계 (우상단)
+    public Vector2 areaMin = new Vector2(-64.5f, 18.4f); // ( 왼쪽 경계 , 아래쪽 경계 )
+    public Vector2 areaMax = new Vector2(145f, 64f);   // ( 오른쪽 경계 , 위쪽 경계 )
 
     private Vector3 moveDirection;
     private Transform ufo;
@@ -13,11 +13,16 @@ public class HumanAI : MonoBehaviour
     private float directionChangeTimer = 0f;
     public float directionChangeInterval = 1.5f;    // 방향 바꾸는 주기 (초)
 
+    // 애니메이션 제어 추가
+    private Animator animator;
+
     void Start()
     {
+        animator = GetComponent<Animator>(); // 애니메이터 연결
         ufo = GameObject.FindWithTag("UFO")?.transform;
         PickRandomDirection();
     }
+
 
     void Update()
     {
@@ -55,6 +60,11 @@ public class HumanAI : MonoBehaviour
             moveDirection.z *= -1;
             ClampPosition();
         }
+
+        animator.SetFloat("MoveX", moveDirection.x);
+        animator.SetFloat("MoveZ", moveDirection.z);
+        animator.SetBool("isMoving", moveDirection.magnitude > 0.1f);
+
     }
 
     void PickRandomDirection()
