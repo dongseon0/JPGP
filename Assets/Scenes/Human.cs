@@ -4,5 +4,10 @@ using UnityEngine;
 
 public class Human : MonoBehaviour
 {
-    public int scoreValue = 10; // 기본값은 10, B타입은 20으로 설정
+    public int scoreValue = 10;
+
+    public bool isInBeam = false;
+    public float captureTimer = 0f;
+
+    public bool isCaptured = false; // 이미 잡혔는지 여부
 }

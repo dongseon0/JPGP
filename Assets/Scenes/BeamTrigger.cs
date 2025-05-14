@@ -1,21 +1,66 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class BeamTrigger : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    public float captureTimeRequired = 2f; // 2초 동안 포획
+    private CaptureUI captureUI; // 포획 바 구현
+
+    private void Start()
+    {
+        captureUI = GetComponentInParent<CaptureUI>(); // UFO에 붙어 있음
+    }
+
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Human"))
         {
             Human human = other.GetComponent<Human>();
-            if (human != null)
+            if (human != null && !human.isCaptured)
             {
-                GameManager.Instance.AddScore(human.scoreValue);
-                GameManager.Instance.AddCount();
-                Destroy(other.gameObject);
+                if (Input.GetKey(KeyCode.Space))
+                {
+                    human.captureTimer += Time.deltaTime;
+
+                    float progress = Mathf.Clamp01(human.captureTimer / captureTimeRequired);
+                    captureUI.SetProgress(progress);
+                    captureUI.Show(true);
+
+                    if (human.captureTimer >= captureTimeRequired)
+                    {
+                        human.isCaptured = true;
+                        captureUI.Show(false);
+                        StartCoroutine(Abduct(human));
+                    }
+                }
+                else
+                {
+                    human.captureTimer = 0f;
+                    captureUI.Show(false);
+                }
             }
         }
     }
-}
 
+    private IEnumerator Abduct(Human human)
+    {
+        Vector3 start = human.transform.position;
+        Vector3 target = start + Vector3.up * 2f;
+        float duration = 1.5f;
+        float elapsed = 0f;
+
+        // 포획 애니메이션
+        while (elapsed < duration)
+        {
+            if (human == null) yield break;
+            human.transform.position = Vector3.Lerp(start, target, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        GameManager.Instance.AddScore(human.scoreValue);
+        GameManager.Instance.AddCount();
+
+        Destroy(human.gameObject);
+    }
+}
