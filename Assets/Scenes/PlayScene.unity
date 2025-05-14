@@ -155,6 +155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab57a7da79f6d4440aa1b29f630e55d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 7
+  detectionRange: 3
+  areaMin: {x: -5, y: -3}
+  areaMax: {x: 5, y: 2}
 --- !u!1 &281049267
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,7 +733,7 @@ MonoBehaviour:
   score: 0
   count: 0
   timer: 0
-  timeLimit: 10
+  timeLimit: 30
   gameOverPanel: {fileID: 1854983589}
   finalScoreText: {fileID: 1683444863}
   scoreText: {fileID: 281049269}
@@ -946,6 +950,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab57a7da79f6d4440aa1b29f630e55d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 7
+  detectionRange: 3
+  areaMin: {x: -5, y: -3}
+  areaMax: {x: 5, y: 2}
 --- !u!1 &1238012619
 GameObject:
   m_ObjectHideFlags: 0
