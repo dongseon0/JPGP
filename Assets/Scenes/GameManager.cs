@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        // 싱글턴 설정 (다른 씬에서도 유지되게 하고 싶으면 DontDestroyOnLoad 추가)
         if (Instance == null)
             Instance = this;
         else
