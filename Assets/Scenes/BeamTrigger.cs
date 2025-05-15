@@ -9,22 +9,26 @@ public class BeamTrigger : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        Debug.Log("Triggered with: " + other.name); 
         if (other.CompareTag("Human"))
         {
+            Debug.Log("Human 감지됨!");
+
             Human human = other.GetComponent<Human>();
             if (human != null && !human.isCaptured)
             {
                 if (Input.GetKey(KeyCode.Space))
-                {
+                {   
+                    Debug.Log("스페이스바 눌림");
                     human.captureTimer += Time.deltaTime;
 
                     float progress = Mathf.Clamp01(human.captureTimer / captureTimeRequired);
                     // 바 위치를 현재 타겟 인간 위로 옮김
-                    captureUI.transform.position = human.transform.position + Vector3.up * 1.5f;
+                    captureUI.transform.position = human.transform.position + Vector3.up * 2f;
 
                     captureUI.SetProgress(progress);
                     captureUI.Show(true);
-                    
+
 
                     if (human.captureTimer >= captureTimeRequired)
                     {
