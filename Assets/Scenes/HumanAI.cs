@@ -63,7 +63,20 @@ public class HumanAI : MonoBehaviour
 
         animator.SetFloat("MoveX", moveDirection.x);
         animator.SetFloat("MoveZ", moveDirection.z);
-        animator.SetBool("isMoving", moveDirection.magnitude > 0.1f);
+        animator.SetBool("isMoving", moveDirection.magnitude > 0.01f);
+
+        // 대각선에서 좌우 우선 조건 주기 위해 새로 추가
+        if (Mathf.Abs(moveDirection.x) > Mathf.Abs(moveDirection.z))
+        {
+            // 좌우가 우선
+            animator.SetFloat("MoveZ", 0);  // 위아래 제거
+        }
+        else
+        {
+            // 위아래가 우선
+            animator.SetFloat("MoveX", 0);  // 좌우 제거
+        }
+
 
     }
 
