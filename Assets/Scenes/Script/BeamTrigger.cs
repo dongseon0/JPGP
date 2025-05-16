@@ -23,8 +23,10 @@ public class BeamTrigger : MonoBehaviour
                     human.captureTimer += Time.deltaTime;
 
                     float progress = Mathf.Clamp01(human.captureTimer / captureTimeRequired);
-                    // 바 위치를 현재 타겟 인간 위로 옮김
-                    captureUI.transform.position = human.transform.position + Vector3.up * 2f;
+                    Collider humanCol = human.GetComponent<Collider>();
+                    Vector3 top = humanCol.bounds.center + Vector3.up * (humanCol.bounds.extents.y + 0.3f);
+                    captureUI.transform.position = top;
+
 
                     captureUI.SetProgress(progress);
                     captureUI.Show(true);
