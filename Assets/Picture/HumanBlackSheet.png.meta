@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a8dbd7241ce0b43ebb7c7c112d024e5b
+guid: afacb5bd5bdd84832a5da2b7fdda20ac
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Human1Sheet_0
+      name: HumanBlackSheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,20 +131,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b96f91ec68de407e8f418defd06a62b
-      internalID: 941982176
+      spriteID: 1f0ad06ab03494f5ba06df52c932551f
+      internalID: 1085258893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Human1Sheet_1
+      name: HumanBlackSheet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -152,20 +152,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b87a64952a084d828735c206f28ff53
-      internalID: 1719233205
+      spriteID: be331415694214486882452d4044cc1c
+      internalID: -455833149
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Human1Sheet_2
+      name: HumanBlackSheet_2
       rect:
         serializedVersion: 2
         x: 64
@@ -173,20 +173,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a19911ff8a43f4975b064668abb2a62f
-      internalID: -1576666783
+      spriteID: 31012105c3b854aa3b3445b1a583a595
+      internalID: -1296217194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Human1Sheet_3
+      name: HumanBlackSheet_3
       rect:
         serializedVersion: 2
         x: 96
@@ -194,20 +194,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 219aa423481fe46ed905918495e37414
-      internalID: -702270890
+      spriteID: 86eb47e4e2a024b4b82ba6fbe2b9379e
+      internalID: 583478223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Human1Sheet_4
+      name: HumanBlackSheet_4
       rect:
         serializedVersion: 2
         x: 0
@@ -215,20 +215,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a60aa5c07df86414f9748288e602575e
-      internalID: 572770104
+      spriteID: 55589a243d9dc49cfbffab5f1aef7b6d
+      internalID: -1182705600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Human1Sheet_5
+      name: HumanBlackSheet_5
       rect:
         serializedVersion: 2
         x: 32
@@ -236,20 +236,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce93c6d78f2b84f0daf649e8cd536689
-      internalID: -881043559
+      spriteID: 9c3d12aba72b64abfb791afb5fc06f0a
+      internalID: 1142348153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Human1Sheet_6
+      name: HumanBlackSheet_6
       rect:
         serializedVersion: 2
         x: 64
@@ -257,20 +257,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94270ae5ae7d64f69b8d38455a7e6d70
-      internalID: -730420537
+      spriteID: 83b2a932779c94a4c9c45083c9e436a3
+      internalID: 1331251439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Human1Sheet_7
+      name: HumanBlackSheet_7
       rect:
         serializedVersion: 2
         x: 96
@@ -278,20 +278,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2335adf52820b4da38cfba17a082a9bb
-      internalID: -1388383643
+      spriteID: dbe852274b72b4943832a6010cb1a916
+      internalID: -1381112958
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Human1Sheet_8
+      name: HumanBlackSheet_8
       rect:
         serializedVersion: 2
         x: 0
@@ -299,20 +299,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25afff041df0841f982c5ea771779226
-      internalID: -859203543
+      spriteID: 1d3f0e24d9ca34049a846015f3cbc1d3
+      internalID: 118978730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Human1Sheet_9
+      name: HumanBlackSheet_9
       rect:
         serializedVersion: 2
         x: 32
@@ -320,20 +320,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ceb2050fbddb64910ac4f9892918838b
-      internalID: 712357133
+      spriteID: 7e327e87216aa4ef48a32671702ede65
+      internalID: 1940855898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Human1Sheet_10
+      name: HumanBlackSheet_10
       rect:
         serializedVersion: 2
         x: 64
@@ -341,20 +341,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f58054b41b014a00ab2e499dc3bff50
-      internalID: 353376342
+      spriteID: 4b24e1d8bb22349119a0ec8110f88796
+      internalID: -1287687909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Human1Sheet_11
+      name: HumanBlackSheet_11
       rect:
         serializedVersion: 2
         x: 96
@@ -362,20 +362,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0c3a6bc039374f1d89504a05a84b2f4
-      internalID: 692928344
+      spriteID: 75aecc0c2f81642378837b1a1df10c0c
+      internalID: -1218813045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Human1Sheet_12
+      name: HumanBlackSheet_12
       rect:
         serializedVersion: 2
         x: 0
@@ -383,20 +383,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 681c05b0cf8494bbf9b71e7e9dfc9141
-      internalID: 1280101704
+      spriteID: 7505f83cbb95c4982a40b4bd678dad42
+      internalID: 791415676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Human1Sheet_13
+      name: HumanBlackSheet_13
       rect:
         serializedVersion: 2
         x: 32
@@ -404,20 +404,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e72dc4b7a7f384f9590914fb517a93b8
-      internalID: -865426384
+      spriteID: 50783f1df16444e029c094c1c8504f7c
+      internalID: 1972038984
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Human1Sheet_14
+      name: HumanBlackSheet_14
       rect:
         serializedVersion: 2
         x: 64
@@ -425,20 +425,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eef4d5473b2274c7b93c9237a41f44bc
-      internalID: 670413432
+      spriteID: 3c1e2da51b7c34384b79e308962a21f9
+      internalID: -743856629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Human1Sheet_15
+      name: HumanBlackSheet_15
       rect:
         serializedVersion: 2
         x: 96
@@ -446,14 +446,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a4c97e3995684a659bb7d94a6144335
-      internalID: 1182629407
+      spriteID: 49afb4eb7839c4646a9451e49d4762c8
+      internalID: -890418604
       vertices: []
       indices: 
       edges: []
@@ -461,7 +461,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: fcd939fbc35b6492f842ba42d9ae00b5
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -469,22 +469,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Human1Sheet_0: 941982176
-      Human1Sheet_1: 1719233205
-      Human1Sheet_10: 353376342
-      Human1Sheet_11: 692928344
-      Human1Sheet_12: 1280101704
-      Human1Sheet_13: -865426384
-      Human1Sheet_14: 670413432
-      Human1Sheet_15: 1182629407
-      Human1Sheet_2: -1576666783
-      Human1Sheet_3: -702270890
-      Human1Sheet_4: 572770104
-      Human1Sheet_5: -881043559
-      Human1Sheet_6: -730420537
-      Human1Sheet_7: -1388383643
-      Human1Sheet_8: -859203543
-      Human1Sheet_9: 712357133
+      HumanBlackSheet_0: 1085258893
+      HumanBlackSheet_1: -455833149
+      HumanBlackSheet_10: -1287687909
+      HumanBlackSheet_11: -1218813045
+      HumanBlackSheet_12: 791415676
+      HumanBlackSheet_13: 1972038984
+      HumanBlackSheet_14: -743856629
+      HumanBlackSheet_15: -890418604
+      HumanBlackSheet_2: -1296217194
+      HumanBlackSheet_3: 583478223
+      HumanBlackSheet_4: -1182705600
+      HumanBlackSheet_5: 1142348153
+      HumanBlackSheet_6: 1331251439
+      HumanBlackSheet_7: -1381112958
+      HumanBlackSheet_8: 118978730
+      HumanBlackSheet_9: 1940855898
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
