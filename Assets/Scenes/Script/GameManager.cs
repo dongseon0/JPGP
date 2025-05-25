@@ -9,8 +9,8 @@ public class GameManager : MonoBehaviour
     public int count = 0;
     public float timer = 0f;
     public float timeLimit = 90f; // 제한 시간 1분 30초
-     private bool isGameOver = false;
-     public GameObject gameOverPanel;
+    private bool isGameOver = false;
+    public GameObject gameOverPanel;
     public TMP_Text finalScoreText;
 
 
@@ -61,9 +61,11 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score : " + score;
     }
 
+
     public void AddCount()
     {
         count++;
         countText.text = "Count : " + count.ToString("D2");
     }
+
 }
