@@ -28,7 +28,7 @@ public class Human : MonoBehaviour
                 break;
             case HumanType.Dog:
                 moveSpeed = 7f;
-                scoreValue = 30;
+                scoreValue = -10;
                 break;
         }
     }
