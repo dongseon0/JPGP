@@ -745,7 +745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blackHumanPrefab: {fileID: 587573148911438050, guid: 61473b3474d8d410781fec924160caf8, type: 3}
   spawnInterval: 2
-  maxCount: 5
+  maxCount: 7
   areaMin: {x: -10, y: -5}
   areaMax: {x: 10, y: 5}
 --- !u!4 &753529323
