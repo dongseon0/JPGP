@@ -1204,7 +1204,7 @@ MonoBehaviour:
   score: 0
   count: 0
   timer: 0
-  timeLimit: 30
+  timeLimit: 60
   gameOverPanel: {fileID: 1854983589}
   finalScoreText: {fileID: 1683444863}
   scoreText: {fileID: 281049269}
