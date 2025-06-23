@@ -1524,7 +1524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   timer: 0
-  timeLimit: 10
+  timeLimit: 60
   gameOverPanel: {fileID: 1854983589}
   finalScoreText: {fileID: 1683444863}
   nextTierText: {fileID: 1184168482}
@@ -3426,7 +3426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3253697497003275807, guid: f6470122ed2a04396806ed472fb032ff, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3253697497003275807, guid: f6470122ed2a04396806ed472fb032ff, type: 3}
       propertyPath: m_Color.g
@@ -3434,7 +3434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3253697497003275807, guid: f6470122ed2a04396806ed472fb032ff, type: 3}
       propertyPath: m_Color.r
-      value: 0.8509928
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

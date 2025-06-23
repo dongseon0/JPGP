@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+
 
 public class VisualNovelSystem : MonoBehaviour
 {
@@ -52,7 +54,10 @@ public class VisualNovelSystem : MonoBehaviour
     void ShowLine()
     {
         if (currentIndex >= story.Count)
+        {
+            SceneManager.LoadScene("PlayScene");  
             return;
+        }
 
         DialogueLine line = story[currentIndex];
 
@@ -71,6 +76,7 @@ public class VisualNovelSystem : MonoBehaviour
         typingCoroutine = StartCoroutine(TypeLine(line.text));
         currentIndex++;
     }
+
 
     IEnumerator TypeLine(string text)
     {
