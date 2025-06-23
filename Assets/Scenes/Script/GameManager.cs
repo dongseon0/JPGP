@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
 
         // 시간 UI 업데이트
         int timeLeft = Mathf.FloorToInt(timeLimit - timer);
-        timerText.text = "Timer : " + Mathf.Max(timeLeft, 0) + "sec";
+        timerText.text = $"Timer : {Mathf.Max(timeLeft, 0)}초";
 
         // 제한 시간 초과 시 게임 종료
         if (timer >= timeLimit)
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f; // 게임 정지
 
         gameOverPanel.SetActive(true); // UI 표시
-        finalScoreText.text = $"Game Over\nScore: {score}";
+        finalScoreText.text = $"Score: {score}";
         ShowResultImage(score);
     }
 
@@ -90,7 +90,8 @@ public class GameManager : MonoBehaviour
     public void AddScore(int value)
     {
         score += value;
-        scoreText.text = "Score : " + score;
+        scoreText.text = $"Score : {score}점";
+
     }
 
     // 작동안함. 디버그 출력만 함
