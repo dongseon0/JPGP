@@ -1365,7 +1365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   timer: 0
-  timeLimit: 10
+  timeLimit: 90
   gameOverPanel: {fileID: 1854983589}
   finalScoreText: {fileID: 1683444863}
   scoreText: {fileID: 281049269}
@@ -3082,7 +3082,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1854983590
 RectTransform:
   m_ObjectHideFlags: 0
