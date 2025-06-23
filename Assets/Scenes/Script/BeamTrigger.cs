@@ -17,7 +17,7 @@ public class BeamTrigger : MonoBehaviour
             Human human = other.GetComponent<Human>();
             if (human != null && !human.isCaptured)
             {
-                if (Input.GetKey(KeyCode.Space))
+                if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
                 {   
                     Debug.Log("스페이스바 눌림");
                     human.captureTimer += Time.deltaTime;
@@ -50,23 +50,10 @@ public class BeamTrigger : MonoBehaviour
 
     private IEnumerator Abduct(Human human)
     {
-        Vector3 start = human.transform.position;
-        Vector3 target = start + Vector3.up * 2f;
-        float duration = 1.5f;
-        float elapsed = 0f;
-
-        // 포획 애니메이션
-        while (elapsed < duration)
-        {
-            if (human == null) yield break;
-            human.transform.position = Vector3.Lerp(start, target, elapsed / duration);
-            elapsed += Time.deltaTime;
-            yield return null;
-        }
-
         GameManager.Instance.AddScore(human.scoreValue);
         GameManager.Instance.AddCount();
-
         Destroy(human.gameObject);
+        yield break;
     }
+
 }
