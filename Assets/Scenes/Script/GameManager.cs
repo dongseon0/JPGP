@@ -19,6 +19,17 @@ public class GameManager : MonoBehaviour
     public TMP_Text countText;
     public TMP_Text timerText;
 
+
+    // 점수에 따라 보여줄 이미지 오브젝트들
+    public GameObject result_Failure;
+    public GameObject result_Good;
+    public GameObject result_Great;
+    public GameObject result_Amazing;
+
+
+
+
+
     private void Awake()
     {
         if (Instance == null)
@@ -50,9 +61,28 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f; // 게임 정지
 
         gameOverPanel.SetActive(true); // UI 표시
-        finalScoreText.text = $"Game Over\nScore: {score}\nCount: {count:D2}";
+        finalScoreText.text = $"Game Over\nScore: {score}";
+        ShowResultImage(score);
     }
 
+    private void ShowResultImage(int score)
+    {
+        // 모든 결과 이미지 숨겨놓기
+        result_Failure.SetActive(false);
+        result_Good.SetActive(false);
+        result_Great.SetActive(false);
+        result_Amazing.SetActive(false);
+
+        // 점수에 따라 특정 이미지 Active
+        if (score >= 150)
+            result_Amazing.SetActive(true);
+        else if (score >= 100)
+            result_Great.SetActive(true);
+        else if (score >= 50)
+            result_Good.SetActive(true);
+        else
+            result_Failure.SetActive(true);
+    }
 
 
     public void AddScore(int value)
