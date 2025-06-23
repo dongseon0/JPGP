@@ -280,8 +280,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1600, y: -158}
-  m_SizeDelta: {x: 318.3517, y: 63.449}
+  m_AnchoredPosition: {x: 1685, y: -119}
+  m_SizeDelta: {x: 252.3036, y: 53.8201}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &281049269
 MonoBehaviour:
@@ -312,8 +312,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4286398265
+  m_fontColor: {r: 0.2244571, g: 0.24855465, b: 0.49056602, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -330,8 +330,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1989,8 +1989,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 589.82825, y: 357.56708}
-  m_SizeDelta: {x: 492.9136, y: 287.7986}
+  m_AnchoredPosition: {x: 708, y: 403}
+  m_SizeDelta: {x: 390.6493, y: 244.123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1210595255
 MonoBehaviour:
@@ -2166,8 +2166,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1165.1876, y: -232.99988}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 1378.3845, y: -182.45767}
+  m_SizeDelta: {x: 158.5062, y: 42.4121}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1283916232
 MonoBehaviour:
@@ -2928,8 +2928,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1721.3694, y: -232.99988}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 1819.1758, y: -182.45767}
+  m_SizeDelta: {x: 158.5062, y: 42.4121}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1703331550
 MonoBehaviour:
@@ -2960,8 +2960,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4286398265
+  m_fontColor: {r: 0.22352941, g: 0.24705882, b: 0.49019608, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2978,8 +2978,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3495,7 +3495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1854983590
 RectTransform:
   m_ObjectHideFlags: 0
