@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     private bool isGameOver = false;
     public GameObject gameOverPanel;
     public TMP_Text finalScoreText;
+    public TMP_Text nextTierText;
+
 
 
     public TMP_Text scoreText;
@@ -65,6 +67,7 @@ public class GameManager : MonoBehaviour
         gameOverPanel.SetActive(true); // UI 표시
         finalScoreText.text = $"Score: {score}";
         ShowResultImage(score);
+        ShowNextTierInfo(score);
     }
 
     private void ShowResultImage(int score)
@@ -99,6 +102,33 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("AddCount called - but no longer used.");
     }
+
+    private void ShowNextTierInfo(int score)
+{
+    string message = "";
+
+    if (score < 300)
+    {
+        int remain = 300 - score;
+        message = $"GOOD까지 {remain}점 남았어요!";
+    }
+    else if (score < 400)
+    {
+        int remain = 400 - score;
+        message = $"GREAT까지 {remain}점 남았어요!";
+    }
+    else if (score < 500)
+    {
+        int remain = 500 - score;
+        message = $"AMAZING까지 {remain}점 남았어요!";
+    }
+    else
+    {
+        message = "최고 등급에 도달했어요!";
+    }
+
+    nextTierText.text = message;
+}
 
 
 
