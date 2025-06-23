@@ -305,8 +305,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Score : 0\uC810"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a284fdd95f9884c45be9fb8a6fe31f7f, type: 2}
-  m_sharedMaterial: {fileID: -9219024421428088542, guid: a284fdd95f9884c45be9fb8a6fe31f7f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 10e2e87a46dcc47a9b8de4561dd421ca, type: 2}
+  m_sharedMaterial: {fileID: 6092864878572608430, guid: 10e2e87a46dcc47a9b8de4561dd421ca, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1855,7 +1855,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 255, y: -441}
+  m_AnchoredPosition: {x: 207, y: -431}
   m_SizeDelta: {x: 1050.4777, y: 227}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1184168482
@@ -1880,8 +1880,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uB2E4\uC74C \uB4F1\uAE09\uAE4C\uC9C0 "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a284fdd95f9884c45be9fb8a6fe31f7f, type: 2}
-  m_sharedMaterial: {fileID: -9219024421428088542, guid: a284fdd95f9884c45be9fb8a6fe31f7f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 10e2e87a46dcc47a9b8de4561dd421ca, type: 2}
+  m_sharedMaterial: {fileID: 6092864878572608430, guid: 10e2e87a46dcc47a9b8de4561dd421ca, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2655,8 +2655,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Score : 000'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a284fdd95f9884c45be9fb8a6fe31f7f, type: 2}
-  m_sharedMaterial: {fileID: -9219024421428088542, guid: a284fdd95f9884c45be9fb8a6fe31f7f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 10e2e87a46dcc47a9b8de4561dd421ca, type: 2}
+  m_sharedMaterial: {fileID: 6092864878572608430, guid: 10e2e87a46dcc47a9b8de4561dd421ca, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2680,8 +2680,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 85
-  m_fontSizeBase: 85
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2953,8 +2953,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Timer : 00\uCD08 "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a284fdd95f9884c45be9fb8a6fe31f7f, type: 2}
-  m_sharedMaterial: {fileID: -9219024421428088542, guid: a284fdd95f9884c45be9fb8a6fe31f7f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 10e2e87a46dcc47a9b8de4561dd421ca, type: 2}
+  m_sharedMaterial: {fileID: 6092864878572608430, guid: 10e2e87a46dcc47a9b8de4561dd421ca, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
