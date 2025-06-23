@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 
     public int score = 0;
     public float timer = 0f;
-    public float timeLimit = 90f; // 제한 시간 1분 30초
+    public float timeLimit = 60f; // 제한 시간 1분
     private bool isGameOver = false;
     public GameObject gameOverPanel;
     public TMP_Text finalScoreText;
@@ -76,11 +76,11 @@ public class GameManager : MonoBehaviour
         result_Amazing.SetActive(false);
 
         // 점수에 따라 특정 이미지 Active
-        if (score >= 150)
+        if (score >= 500)
             result_Amazing.SetActive(true);
-        else if (score >= 100)
+        else if (score >= 400)
             result_Great.SetActive(true);
-        else if (score >= 50)
+        else if (score >= 300)
             result_Good.SetActive(true);
         else
             result_Failure.SetActive(true);
