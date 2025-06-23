@@ -17,7 +17,7 @@ public class BeamTrigger : MonoBehaviour
             Human human = other.GetComponent<Human>();
             if (human != null && !human.isCaptured)
             {
-                if (Input.GetKey(KeyCode.Space))
+                if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
                 {   
                     Debug.Log("스페이스바 눌림");
                     human.captureTimer += Time.deltaTime;
