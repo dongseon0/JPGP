@@ -7,10 +7,12 @@ public class GameManager : MonoBehaviour
 
     public int score = 0;
     public float timer = 0f;
-    public float timeLimit = 90f; // 제한 시간 1분 30초
+    public float timeLimit = 60f; // 제한 시간 1분
     private bool isGameOver = false;
     public GameObject gameOverPanel;
     public TMP_Text finalScoreText;
+    public TMP_Text nextTierText;
+
 
 
     public TMP_Text scoreText;
@@ -49,7 +51,7 @@ public class GameManager : MonoBehaviour
 
         // 시간 UI 업데이트
         int timeLeft = Mathf.FloorToInt(timeLimit - timer);
-        timerText.text = "Timer : " + Mathf.Max(timeLeft, 0) + "sec";
+        timerText.text = $"Timer : {Mathf.Max(timeLeft, 0)}초";
 
         // 제한 시간 초과 시 게임 종료
         if (timer >= timeLimit)
@@ -63,8 +65,9 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f; // 게임 정지
 
         gameOverPanel.SetActive(true); // UI 표시
-        finalScoreText.text = $"Game Over\nScore: {score}";
+        finalScoreText.text = $"Score: {score}";
         ShowResultImage(score);
+        ShowNextTierInfo(score);
     }
 
     private void ShowResultImage(int score)
@@ -76,11 +79,11 @@ public class GameManager : MonoBehaviour
         result_Amazing.SetActive(false);
 
         // 점수에 따라 특정 이미지 Active
-        if (score >= 150)
+        if (score >= 500)
             result_Amazing.SetActive(true);
-        else if (score >= 100)
+        else if (score >= 400)
             result_Great.SetActive(true);
-        else if (score >= 50)
+        else if (score >= 300)
             result_Good.SetActive(true);
         else
             result_Failure.SetActive(true);
@@ -90,7 +93,8 @@ public class GameManager : MonoBehaviour
     public void AddScore(int value)
     {
         score += value;
-        scoreText.text = "Score : " + score;
+        scoreText.text = $"Score : {score}점";
+
     }
 
     // 작동안함. 디버그 출력만 함
@@ -98,6 +102,33 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("AddCount called - but no longer used.");
     }
+
+    private void ShowNextTierInfo(int score)
+{
+    string message = "";
+
+    if (score < 300)
+    {
+        int remain = 300 - score;
+        message = $"GOOD까지 {remain}점 남았어요!";
+    }
+    else if (score < 400)
+    {
+        int remain = 400 - score;
+        message = $"GREAT까지 {remain}점 남았어요!";
+    }
+    else if (score < 500)
+    {
+        int remain = 500 - score;
+        message = $"AMAZING까지 {remain}점 남았어요!";
+    }
+    else
+    {
+        message = "최고 등급에 도달했어요!";
+    }
+
+    nextTierText.text = message;
+}
 
 
 
