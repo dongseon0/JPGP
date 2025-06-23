@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public int score = 0;
-    public int count = 0;
     public float timer = 0f;
     public float timeLimit = 90f; // 제한 시간 1분 30초
     private bool isGameOver = false;
@@ -14,9 +13,7 @@ public class GameManager : MonoBehaviour
     public TMP_Text finalScoreText;
 
 
-
     public TMP_Text scoreText;
-    public TMP_Text countText;
     public TMP_Text timerText;
 
 
@@ -27,15 +24,20 @@ public class GameManager : MonoBehaviour
     public GameObject result_Amazing;
 
 
-
-
-
     private void Awake()
     {
         if (Instance == null)
             Instance = this;
         else
             Destroy(gameObject);
+    }
+
+    private void Start()
+    {
+        result_Failure.SetActive(false);
+        result_Good.SetActive(false);
+        result_Great.SetActive(false);
+        result_Amazing.SetActive(false);
     }
 
 
@@ -91,11 +93,12 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score : " + score;
     }
 
-
+    // 작동안함. 디버그 출력만 함
     public void AddCount()
     {
-        count++;
-        countText.text = "Count : " + count.ToString("D2");
+        Debug.Log("AddCount called - but no longer used.");
     }
+
+
 
 }

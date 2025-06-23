@@ -1391,14 +1391,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  count: 0
   timer: 0
-  timeLimit: 60
+  timeLimit: 90
   gameOverPanel: {fileID: 1854983589}
-  finalScoreText: {fileID: 1683444863}
+  finalScoreText: {fileID: 0}
   scoreText: {fileID: 281049269}
-  countText: {fileID: 1283916232}
   timerText: {fileID: 1703331550}
+  result_Failure: {fileID: 1812551157}
+  result_Good: {fileID: 179086784}
+  result_Great: {fileID: 1671028412}
+  result_Amazing: {fileID: 766326781}
 --- !u!4 &903530836
 Transform:
   m_ObjectHideFlags: 0
