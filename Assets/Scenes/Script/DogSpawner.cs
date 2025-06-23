@@ -42,9 +42,12 @@ public class DogHumanSpawner : MonoBehaviour
         int count = 0;
         foreach (Human h in FindObjectsOfType<Human>())
         {
-            if (h.type == type && !h.isCaptured)
+            if (h != null && h.gameObject != null && h.type == type && !h.isCaptured)
+            {
                 count++;
+            }
         }
         return count;
     }
+
 }
