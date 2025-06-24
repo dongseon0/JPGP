@@ -4164,7 +4164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yellowHumanPrefab: {fileID: 8182231909022279824, guid: 39d1e30efea444a1dafdb7755e6fa798, type: 3}
   spawnInterval: 2
-  maxCount: 8
+  maxCount: 6
   areaMin: {x: -64.5, y: 18.4}
   areaMax: {x: 145, y: 64}
 --- !u!4 &2110869502
