@@ -3,17 +3,16 @@ using UnityEngine;
 public class HumanAI : MonoBehaviour
 {
     public float moveSpeed = 15f;                  // 이동 속도
-    public float detectionRange = 3f;               // UFO 인식 범위
-    public Vector2 areaMin = new Vector2(-64.5f, 18.4f); // ( 왼쪽 경계 , 아래쪽 경계 )
-    public Vector2 areaMax = new Vector2(145f, 64f);   // ( 오른쪽 경계 , 위쪽 경계 )
+    public float detectionRange = 10f;             // UFO 인식 범위 (멀리서도 반응)
+    public Vector2 areaMin = new Vector2(-64.5f, 18.4f); // 왼쪽·아래 경계
+    public Vector2 areaMax = new Vector2(145f, 64f);     // 오른쪽·위 경계
 
     private Vector3 moveDirection;
     private Transform ufo;
 
     private float directionChangeTimer = 0f;
-    public float directionChangeInterval = 1.5f;    // 방향 바꾸는 주기 (초)
+    public float directionChangeInterval = 1.5f;   // UFO 멀 때 랜덤 방향 바꾸는 주기
 
-    // 애니메이션 제어 추가
     private Animator animator;
 
     void Start()
@@ -23,7 +22,6 @@ public class HumanAI : MonoBehaviour
         PickRandomDirection();
     }
 
-
     void Update()
     {
         if (ufo == null) return;
@@ -32,12 +30,12 @@ public class HumanAI : MonoBehaviour
 
         if (toUFO.magnitude < detectionRange)
         {
-            // 빔이 가까워지면 반대 방향으로 도망
+            // UFO가 가까우면 무조건 반대 방향
             moveDirection = (-toUFO).normalized;
         }
         else
         {
-            // 일정 시간마다 방향 변경
+            // UFO가 멀면 일정 주기로 방향 변경
             directionChangeTimer += Time.deltaTime;
             if (directionChangeTimer >= directionChangeInterval)
             {
@@ -61,24 +59,19 @@ public class HumanAI : MonoBehaviour
             ClampPosition();
         }
 
-       // 먼저 방향을 판단해서 값 조정
-    if (Mathf.Abs(moveDirection.x) > Mathf.Abs(moveDirection.z))
-    {
-        // 좌우 우선
-        animator.SetFloat("MoveX", moveDirection.x);
-        animator.SetFloat("MoveZ", 0f);
-    }
-    else
-    {
-        // 위아래 우선
-        animator.SetFloat("MoveX", 0f);
-        animator.SetFloat("MoveZ", moveDirection.z);
-    }
+        // 애니메이션 방향 세팅
+        if (Mathf.Abs(moveDirection.x) > Mathf.Abs(moveDirection.z))
+        {
+            animator.SetFloat("MoveX", moveDirection.x);
+            animator.SetFloat("MoveZ", 0f);
+        }
+        else
+        {
+            animator.SetFloat("MoveX", 0f);
+            animator.SetFloat("MoveZ", moveDirection.z);
+        }
 
-    // 그 다음 isMoving 여부 전달
-    animator.SetBool("isMoving", moveDirection.magnitude > 0.01f);
-
-
+        animator.SetBool("isMoving", moveDirection.magnitude > 0.01f);
     }
 
     void PickRandomDirection()
@@ -89,7 +82,6 @@ public class HumanAI : MonoBehaviour
 
     void ClampPosition()
     {
-        // 경계 밖으로 안 나가게 고정
         float clampedX = Mathf.Clamp(transform.position.x, areaMin.x, areaMax.x);
         float clampedZ = Mathf.Clamp(transform.position.z, areaMin.y, areaMax.y);
         transform.position = new Vector3(clampedX, transform.position.y, clampedZ);
