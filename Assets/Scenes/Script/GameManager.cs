@@ -25,6 +25,14 @@ public class GameManager : MonoBehaviour
     public GameObject result_Great;
     public GameObject result_Amazing;
 
+    // 결과 사운드
+    public AudioSource sfxSource;          
+    public AudioClip sfxFailure;
+    public AudioClip sfxGood;
+    public AudioClip sfxGreat;
+    public AudioClip sfxAmazing;
+    public float sfxVolume = 0.8f;
+
 
     private void Awake()
     {
@@ -61,6 +69,7 @@ public class GameManager : MonoBehaviour
     }
     private void EndGame()
     {
+        if (isGameOver) return;
         isGameOver = true;
         Time.timeScale = 0f; // 게임 정지
 
@@ -68,6 +77,7 @@ public class GameManager : MonoBehaviour
         finalScoreText.text = $"Score: {score}";
         ShowResultImage(score);
         ShowNextTierInfo(score);
+        PlayResultSfx(score);
     }
 
     private void ShowResultImage(int score)
@@ -104,32 +114,52 @@ public class GameManager : MonoBehaviour
     }
 
     private void ShowNextTierInfo(int score)
-{
-    string message = "";
-
-    if (score < 300)
     {
-        int remain = 300 - score;
-        message = $"GOOD까지 {remain}점 남았어요!";
+        string message = "";
+
+        if (score < 300)
+        {
+            int remain = 300 - score;
+            message = $"GOOD까지 {remain}점 남았어요!";
+        }
+        else if (score < 400)
+        {
+            int remain = 400 - score;
+            message = $"GREAT까지 {remain}점 남았어요!";
+        }
+        else if (score < 500)
+        {
+            int remain = 500 - score;
+            message = $"AMAZING까지 {remain}점 남았어요!";
+        }
+        else
+        {
+            message = "최고 등급에 도달했어요!";
+        }
+
+        nextTierText.text = message;
     }
-    else if (score < 400)
+    //결과에 따른 사운드 재생
+    private void PlayResultSfx(int scoreValue)
     {
-        int remain = 400 - score;
-        message = $"GREAT까지 {remain}점 남았어요!";
+        AudioClip clip = null;
+
+        if (scoreValue >= 500) clip = sfxAmazing;
+        else if (scoreValue >= 400) clip = sfxGreat;
+        else if (scoreValue >= 300) clip = sfxGood;
+        else clip = sfxFailure;
+
+        if (clip == null) return;
+
+        if (sfxSource != null)
+        {
+            sfxSource.volume = sfxVolume;   // 볼륨 통일
+            sfxSource.PlayOneShot(clip);
+        }
+        else
+        {
+            // 2D로 안전 재생(임시 오브젝트)
+            AudioSource.PlayClipAtPoint(clip, Camera.main ? Camera.main.transform.position : Vector3.zero, sfxVolume);
+        }
     }
-    else if (score < 500)
-    {
-        int remain = 500 - score;
-        message = $"AMAZING까지 {remain}점 남았어요!";
-    }
-    else
-    {
-        message = "최고 등급에 도달했어요!";
-    }
-
-    nextTierText.text = message;
-}
-
-
-
 }
