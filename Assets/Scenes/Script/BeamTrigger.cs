@@ -52,7 +52,10 @@ public class BeamTrigger : MonoBehaviour
     {
         GameManager.Instance.AddScore(human.scoreValue);
         GameManager.Instance.AddCount();
-        Destroy(human.gameObject);
+
+        // Human.cs의 OnCaptured() 함수 호출
+        human.OnCaptured();
+
         yield break;
     }
 

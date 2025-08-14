@@ -246,6 +246,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179086784}
   m_CullTransparentMesh: 1
+--- !u!1 &241003504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 587573148911438050, guid: 61473b3474d8d410781fec924160caf8, type: 3}
+  m_PrefabInstance: {fileID: 8061969915701874269}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &281049267
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,7 +887,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8b245fc0ff2cc486780b7b02733efbf9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.21
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1143,7 +1148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e853c22c54c4a4de0ba28868bd4db4c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackHumanPrefab: {fileID: 587573148911438050, guid: 61473b3474d8d410781fec924160caf8, type: 3}
+  blackHumanPrefab: {fileID: 241003504}
   spawnInterval: 1.5
   maxCount: 7
   areaMin: {x: -10, y: -5}
@@ -1227,6 +1232,10 @@ PrefabInstance:
       propertyPath: scoreValue
       value: -10
       objectReference: {fileID: 0}
+    - target: {fileID: 4519778885963331641, guid: 39d1e30efea444a1dafdb7755e6fa798, type: 3}
+      propertyPath: captureCompleteClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d2ddc755a1374e78af48d7982993aa8, type: 3}
     - target: {fileID: 8182231909022279824, guid: 39d1e30efea444a1dafdb7755e6fa798, type: 3}
       propertyPath: m_Name
       value: Dog
@@ -3562,6 +3571,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854983589}
   m_CullTransparentMesh: 1
+--- !u!1 &1864585168 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8182231909022279824, guid: 39d1e30efea444a1dafdb7755e6fa798, type: 3}
+  m_PrefabInstance: {fileID: 8755571442472395698}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1871861051
 GameObject:
   m_ObjectHideFlags: 0
@@ -4003,7 +4017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4eb41966ee4d4d6cb47f971919c5794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yellowHumanPrefab: {fileID: 8182231909022279824, guid: 39d1e30efea444a1dafdb7755e6fa798, type: 3}
+  yellowHumanPrefab: {fileID: 1864585168}
   spawnInterval: 3
   maxCount: 7
   areaMin: {x: -64.5, y: 18.4}
@@ -4141,6 +4155,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Human_Black
       objectReference: {fileID: 0}
+    - target: {fileID: 1068355827565632173, guid: 61473b3474d8d410781fec924160caf8, type: 3}
+      propertyPath: captureCompleteClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 924b384a7e155437286dc4309bdceead, type: 3}
     - target: {fileID: 1520860142401958885, guid: 61473b3474d8d410781fec924160caf8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.6
@@ -4234,6 +4252,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4519778885963331641, guid: 39d1e30efea444a1dafdb7755e6fa798, type: 3}
+      propertyPath: captureCompleteClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 967c4abb827384c809a33f1e3c713855, type: 3}
     - target: {fileID: 8182231909022279824, guid: 39d1e30efea444a1dafdb7755e6fa798, type: 3}
       propertyPath: m_Name
       value: Human_Yellow
