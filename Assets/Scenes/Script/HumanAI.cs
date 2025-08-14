@@ -2,16 +2,17 @@ using UnityEngine;
 
 public class HumanAI : MonoBehaviour
 {
-    public float moveSpeed = 15f;                  // 이동 속도
-    public float detectionRange = 10f;             // UFO 인식 범위 (멀리서도 반응)
-    public Vector2 areaMin = new Vector2(-64.5f, 18.4f); // 왼쪽·아래 경계
-    public Vector2 areaMax = new Vector2(145f, 64f);     // 오른쪽·위 경계
+    public float moveSpeed = 15f;                  // 기본 이동 속도
+    public float escapeSpeed = 25f;                // UFO 가까울 때 속도
+    public float detectionRange = 10f;             // UFO 인식 범위
+    public Vector2 areaMin = new Vector2(-64.5f, 18.4f); 
+    public Vector2 areaMax = new Vector2(145f, 64f);
 
     private Vector3 moveDirection;
     private Transform ufo;
 
     private float directionChangeTimer = 0f;
-    public float directionChangeInterval = 1.5f;   // UFO 멀 때 랜덤 방향 바꾸는 주기
+    public float directionChangeInterval = 1.5f;
 
     private Animator animator;
 
@@ -28,14 +29,17 @@ public class HumanAI : MonoBehaviour
 
         Vector3 toUFO = ufo.position - transform.position;
 
+        float currentSpeed = moveSpeed; // 기본 속도
+
         if (toUFO.magnitude < detectionRange)
         {
-            // UFO가 가까우면 무조건 반대 방향
+            // UFO가 가까우면 반대 방향 + 속도 증가
             moveDirection = (-toUFO).normalized;
+            currentSpeed = escapeSpeed;
         }
         else
         {
-            // UFO가 멀면 일정 주기로 방향 변경
+            // 멀면 랜덤 이동 유지
             directionChangeTimer += Time.deltaTime;
             if (directionChangeTimer >= directionChangeInterval)
             {
@@ -45,9 +49,9 @@ public class HumanAI : MonoBehaviour
         }
 
         // 이동
-        transform.position += moveDirection * moveSpeed * Time.deltaTime;
+        transform.position += moveDirection * currentSpeed * Time.deltaTime;
 
-        // 경계 체크 후 반사 이동
+        // 경계 체크
         if (transform.position.x < areaMin.x || transform.position.x > areaMax.x)
         {
             moveDirection.x *= -1;
@@ -59,7 +63,7 @@ public class HumanAI : MonoBehaviour
             ClampPosition();
         }
 
-        // 애니메이션 방향 세팅
+        // 애니메이션
         if (Mathf.Abs(moveDirection.x) > Mathf.Abs(moveDirection.z))
         {
             animator.SetFloat("MoveX", moveDirection.x);
