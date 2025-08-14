@@ -1452,7 +1452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   timer: 0
-  timeLimit: 10
+  timeLimit: 60
   gameOverPanel: {fileID: 1854983589}
   finalScoreText: {fileID: 1683444863}
   nextTierText: {fileID: 1184168482}
