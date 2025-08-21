@@ -1,29 +1,43 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class UFOController : MonoBehaviour
 {
     public float moveSpeed = 5f;
+
+
+    public Vector2 areaMin = new Vector2(-64.5f, 50f);   // X 최소, Z 최소
+    public Vector2 areaMax = new Vector2(145f, 100f);    // X 최대, Z 최대
+
+    public float margin = 0f; // 벽에서 약간 띄우고 싶으면 0.5f 같은 값
+
     private Rigidbody rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
-        
+
+        rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        float moveX = Input.GetAxisRaw("Horizontal"); // A, D
-        float moveZ = Input.GetAxisRaw("Vertical");   // W, S
-        Vector3 move = new Vector3(moveX, 0f, moveZ).normalized; //normalized로 이동속도가 일정하게 유지되도록 함
-    
-        // rb.MovePosition(...) -> 부드럽고 충돌 가능하게 이동시켜주는 함수, 벽에 부딪혀도 충돌 작동
-        rb.MovePosition(rb.position + move * moveSpeed * Time.fixedDeltaTime);
-   
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveZ = Input.GetAxisRaw("Vertical");
+        Vector3 move = new Vector3(moveX, 0f, moveZ).normalized;
+
+        Vector3 target = rb.position + move * moveSpeed * Time.fixedDeltaTime;
+
+        // 경계 클램프 (XZ만)
+        float minX = areaMin.x + margin;
+        float maxX = areaMax.x - margin;
+        float minZ = areaMin.y + margin;
+        float maxZ = areaMax.y - margin;
+
+        target.x = Mathf.Clamp(target.x, minX, maxX);
+        target.z = Mathf.Clamp(target.z, minZ, maxZ);
+
+        rb.MovePosition(target);
     }
 }
